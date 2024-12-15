@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripadvisor</title>
+    <!-- CSS Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header-->
+    <div class="header-wrapper">
+        <div class="header">
+            <div class="header__logo">
+                <i class="fa-solid fa-bars"></i>
+                <img src="./img/logo.svg">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="header__navbar">
+                <ul>
+                    <li class="drop-down">Discover </li>
+                    <li>Trips</li>
+                    <li>Review</li>
+                    <li id="forums">Forums</li>
+                </ul>
+            </div>
+
+            <div class="header__signin">
+                <div class="header__signin__icon">
+                    <i class="fa-solid fa-globe" style="color: #000000;"></i>
+                    <div><span class="line"> | </span><span class="inr">INR</span></div>
+                </div>
+                <button>Sign In</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Category -->
+    <div class="category__title">
+        <h1>Where to?</h1>
+    </div>
+
+    <div class="category__list">
+        <ul>
+            <li id="searchall"><img src="./img/home.png">Search All</li>
+            <li><img src="./img/double-bed.png">Hotels</li>
+            <li><img src="./img/ticket.png">Things to Do</li>
+            <li><img src="./img/fork.png">Restaurants</li>
+            <li><img src="./img/airplane.png">Flights </li>
+            <li><img src="./img/house.png">Holiday Homes</li>
+        </ul>
+    </div>
+
+    <!-- Search Bar-->
+    <div  data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom "class="searchbar-wrapper">
+        <div class="searchbar">
+            <img src="./img/search.png">
+            <input type="text" placeholder="Places to go, things to do, hotels...">
+            <button class="searchbar__button">Search</button>
+        </div>
+    </div>
+
+    <!-- Achievements Banner-->
+    <div class="achievements">
+        <img src="./img/caption.jpg">
+        <div  data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" class="achievements__content">
+            <h1>Cheers to your Achievements</h1>
+            <p>We went, we reviewed, we reached milestones. See the big things we did together in 2024.</p>
+            <button class="achievements__button">Check it out</button>
+        </div>
+    </div>
+
+    <!-- Treat Yourself Card -->
+
+    <div class="treat">
+        <h1 class="treat__title">Treat yourself to an award-winning meal</h1>
+        <p class="treat__subtitle">2024’s Travellers’ Choice Awards Best of the Best Restaurants</p>
+
+        <div class="treat__card">
+            <div class="treat__content">
+                <img src="./img/t1.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"  class="treat__content__title">Fine Dining</h1>
+            </div>
+            <div class="treat__content">
+                <img src="./img/t2.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title"> Date Night </h1>
+            </div>
+            <div class="treat__content">
+                <img src="./img/t3.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title"> Casual Dining </h1>
+            </div>
+            <div class="treat__content">
+                <img class="treat__content__arrow" src="./img/t4.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title">Hidden Gems</h1>
+                <i id="arrow1" class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- inspired Card -->
+
+    <div   data-aos="fade-up"
+    data-aos-duration="1000" class="inspired">
+        <h1 class="inspired__title">Get inspired by our fave travel creators</h1>
+        <p class="inspired__subtitle">Tried-and-true guidance to fuel your next big trip</p>
+
+        <div class="inspired__card">
+            <div class="inspired__content">
+                <img src="./img/i1.jpg">
+                <p>By Ashlyn S</p>
+                <p> 3 family-friendly days in Rome</p>
+                <i style="color:#FF5D5D" class="fa-solid fa-heart"></i>
+                <p style="color:#333">30 items</p>
+            </div>
+            <div class="inspired__content">
+                <img src="./img/i2.jpg">
+                <p> By Eileen Ivette</p>
+                <p> The ultimate 'workcation' in Mexico City</p>
+                <i style="color:#FF5D5D" class="fa-solid fa-heart"></i>
+                <p style="color:#333">28 items</p>
+            </div>
+
+            <div class="inspired__content">
+                <img src="./img/i3.jpg">
+                <p>By Two Bad Tourists</p>
+                <i id="arrow2" class="fa-solid fa-arrow-right"></i>
+                <p>Exploring LGBTQ+-friendly Barcelona</p>
+                <i style="color:#FF5D5D" class="fa-solid fa-heart"></i>
+                <p style="color:#333">28 items</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coimbatore Card -->
+
+    <div  data-aos="fade-up"
+    data-aos-duration="1000" class="cbe">
+        <h1 class="cbe__title">Ways to tour Coimbatore
+        </h1>
+        <p class="cbe__subtitle">Book these experiences for a close-up look at Coimbatore.</p>
+
+        <div class="cbe__card">
+            <div class="cbe__content">
+                <img src="./img/c1.jpg">
+                <h1 class="cbe__content__title">Coimbatore to Ooty-transfers+Hotel+Sightseeing
+                </h1>
+                <div class="green__circle_list">
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <p>1</p>
+                </div>
+                <p class="cbe__content__para">from ₹26,180 per adult</p>
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+            </div>
+            <div class="cbe__content">
+                <img src="./img/c2.jpg">
+                <h1 class="cbe__content__title">Romantic tour in Coimbatore
+                </h1>
+                <div class="green__circle_list">
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <p>1</p>
+                </div>
+                <p class="cbe__content__para">from ₹36,514 per group
+                </p>
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+            </div>
+
+            <div class="cbe__content">
+                <img src="./img/c3.jpg">
+                <h1 class="cbe__content__title">Explore Palani Murugan Temple From Coimbatore
+                </h1>
+                <div class="green__circle_list">
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <i class="fa-solid fa-circle" style="color: #00aa6c;"></i>
+                    <p>1</p>
+                </div>
+                <p class="cbe__content__para">from ₹26,180 per adult</p>
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+            </div>
+
+            <div class="cbe__content">
+                <img class="cbe__content__arrow" src="./img/c4.jpg">
+                <h1 class="cbe__content__title">The best of Coimbatore walking tour
+                </h1>
+                <p>0 review</p>
+                <p class="cbe__content__para">from ₹36,514 per adult</p>
+                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+                <i id="arrowcbe" class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Explore -->
+    <div   data-aos="fade-up"
+    data-aos-duration="1000" class="explore__wrapper">
+        <div class="explore">
+            <h1 class="explore__title">More to explore</h1>
+
+            <div class="explore__card">
+                <div class="explore__content">
+                    <img src="./img/e3.jpg">
+                    <p>7 Bangkok hotels that highlight Thailand's spectacular architecture</p>
+                </div>
+                <div class="explore__content">
+                    <img src="./img/e2.jpg">
+                    <p> 3 days in Tokyo: The perfect itinerary</p>
+                </div>
+
+                <div class="explore__content">
+                    <img src="./img/e1.jpg">
+                    <p> Where Bali’s best chefs go on their days off</p>
+                    <i id="arrow3" class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dream Trip  -->
+    <div   class="treat">
+        <h1 id="dream__title" class="treat__title">Dream Your Next Trip</h1>
+        <p id="dream__subtitle" class="treat__subtitle">Weekend getaways from Coimbatore</p>
+
+        <div class="treat__card">
+            <div class="treat__content">
+                <img src="./img/d1.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title">
+
+                    Ooty, India</h1>
+            </div>
+            <div class="treat__content">
+                <img src="./img/d2.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title"> Bengaluru, India
+                </h1>
+            </div>
+            <div class="treat__content">
+                <img src="./img/d3.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"  class="treat__content__title"> Madurai, India</h1>
+            </div>
+            <div class="treat__content">
+                <img class="treat__content__arrow" src="./img/d4.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"   class="treat__content__title">Varkala Town, India </h1>
+                <i id="arrow1" class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destination  -->
+    <div class="treat">
+        <h1 class="treat__title">Top destinations for your next holiday</h1>
+        <p class="treat__subtitle">Here's where your fellow travellers are headed</p>
+
+        <div class="treat__card">
+            <div class="treat__content">
+                <img src="./img/h1.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title">Bangkok,<br>Thailand</h1>
+
+            </div>
+            <div class="treat__content">
+                <img src="./img/h2.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"  class="treat__content__title"> Singapore, Singapore
+                </h1>
+            </div>
+            <div class="treat__content">
+                <img src="./img/h3.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" class="treat__content__title"> Mumbai, India</h1>
+            </div>
+            <div class="treat__content">
+                <img class="treat__content__arrow" src="./img/h4.jpg">
+                <h1 data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"  class="treat__content__title"> Bali, Indonesia</h1>
+                <i id="arrow1" class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bike Banner-->
+
+    <div class="bike-banner__wrapper">
+        <div class="bike-banner">
+            <div  class="bike-banner__img">
+                <img src="./img/bike.jpg">
+            </div>
+            <div class="bike-banner__content">
+                <div class="sponsor">
+                    <img src="./img/favicon.ico">
+                    <p>Sponsored by <span> Wanderlabr </span></p>
+                </div>
+                <h1 class="bike-banner__content__title"> Watch The Wandere</h1>
+                <p class="bike-banner__content__desc">Tripadvisor’s award-winning travel series, now <br>streaming on
+                    Amazon Prime Video</p>
+                <button class="bike-banner__content__btn">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Rentals -->
+
+
+    <div   data-aos="fade-up"
+    data-aos-duration="1000 "class="rental__wrapper">
+        <div class="rental">
+            <h1 class="rental__title">Home Rentals Near You</h1>
+            <h5> We think you'd enjoy these homes for a quick trip out of town.</h5>
+
+            <div class="rental__card">
+                <div class="rental__content">
+                    <h3 > We think you'd enjoy these homes for a quick trip out of town.</h3>
+                </div>
+
+                <div class="rental__card">
+                    <div class="rental__content">
+                        <img src="./img/r1.jpg">
+                        <h4> Rentals in Kotagiri</h4>
+                        <p> 6 rentals</p>
+                    </div>
+                    <div class="rental__content">
+                        <img src="./img/r2.jpg">
+                        <h4> Rentals in Coonoor</h4>
+                        <p> 5 rentals</p>
+                    </div>
+
+                    <div class="rental__content">
+                        <img src="./img/r3.jpg">
+                        <h4> Rentals in Ooty (Udhagamandalam)</h4>
+                        <p> 15 rentals</p>
+                        <i id="arrowrental" class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Banner -->
+
+    <div data-aos="zoom-in-up" class="banner2">
+        <div class="banner2__content">
+            <img src="./img/TC_badge_yellow.svg">
+            <h1>Travellers' Choice Awards Best of the Best</h1>
+            <p>Among our top 1% of places, stays, eats, and experiences—decided by you.</p>
+            <button>See the winners</button>
+        </div>
+        <div class="banner2__mobimg">
+            <img src="./img/tc_cards_2024_c04.png">
+        </div>
+    </div>
+
+    <!-- Final Banner for mob -->
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footer__row1">
+            <div class="footer__row1__s1">
+                <h4>About Tripadvisor</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Press</li>
+                    <li>Resources and Policies</li>
+                    <li>Careers</li>
+                    <li>Trust & Safety</li>
+                    <li>Contact us</li>
+                    <li>Accessibility Statement</li>
+                </ul>
+            </div>
+            <div class="footer__row1__s2">
+                <h4>Explore</h4>
+                <ul>
+                    <li>Write a review</li>
+                    <li>Add a Place</li>
+                    <li>Join</li>
+                    <li>Travellers' Choice</li>
+                    <li>GreenLeaders</li>
+                    <li>Help Centre</li>
+                    <li>Travel Articles</li>
+                </ul>
+            </div>
+            <div class="footer__row1__s3">
+                <h4>Do Business With Us</h4>
+                <ul>
+                    <li>Owners & DMO/CVB</li>
+                    <li>Business Advantage</li>
+                    <li>Sponsored Placements</li>
+                    <li>Access our Content API</li>
+                    <h4>Get The App</h4>
+                    <li>iPhone App</li>
+                    <li>Android App</li>
+                </ul>
+            </div>
+            <div class="footer__row1__s4">
+                <h4> Tripadvisor Sites</h4>
+                <ul>
+                    <li>Book tours and attraction tickets on Viator</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__row2">
+
+            <div class="footer__row2__col1">
+
+                <div class="footer__row2__col1__s1">
+                    <div class="footer__row2__col1__s1__img">
+                        <img src="./img/favicon.ico">
+                    </div>
+                    <div class="footer__row2__col1__s1__content">
+                        <p>© 2024 Tripadvisor LLC All rights reserved.</p>
+                        <ul>
+                            <li>Terms of Use</li>
+                            <li>Privacy and Cookies</li>
+                            <li>Cookie Consent</li>
+                            <li>Site Map</li>
+
+                        </ul>
+                        <ul>
+                            <li>How the Site Works</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-size: 12px; margin-top: 10px;" >This is the version of our website addressed to speakers of English in
+                    India. If you are a resident of another country or region,please select the appropriate version
+                    of Tripadvisor for your country or region in the drop-down menu.</p>
+            </div>
+
+
+            <div class="footer__row2__col2">
+                <form>
+                    <table>
+                        <tr>
+                            <td><select>INR
+                                    <option value="inr">₹INR</option>
+                                    <option value="usd">Dollar</option>
+                                    <option value="gbp">Pound</option>
+                                    <option value="krw">Won</option>
+                                </select></td>
+
+                            <td> <select>India
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="south_korea">South Korea</option>
+                                </select>
+
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <div class="social-links">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>
